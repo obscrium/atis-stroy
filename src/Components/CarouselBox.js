@@ -13,7 +13,7 @@ export default class CarouselBox extends Component {
                         className="d-block w-100 item"
                         height={150}
                         src="http://rosenergoatom.ru/upload/NPPsliders/len/19.jpg"
-                        alt="1"
+                        alt="Первая картинка"
                 />
                 <Carousel.Caption>
                     <h3>Атис-Строй</h3>
