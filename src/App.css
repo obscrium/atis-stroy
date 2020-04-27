@@ -12,6 +12,24 @@
 .normal{
   margin-top: 25px;
 }
+table {
+  font-family: sans-serif;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 5px;
+  background: #ece9e0;
+  color: #1d70ce;
+  border: 16px solid #1d70ce;
+  border-radius: 20px;
+  }
+  th {
+  font-size: 18px;
+  padding: 10px;
+  }
+  td {
+  background:#0db1c7;
+  padding: 10px;
+  }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

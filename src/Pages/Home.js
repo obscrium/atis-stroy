@@ -26,7 +26,7 @@ export default class Home extends Component {
                                     <Nav.Link eventKey="third">Новости</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="fourth">Безопасность</Nav.Link>
+                                    <Nav.Link eventKey="fourth">Социальная ответственность</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="fifth">Партнерам</Nav.Link>
@@ -48,9 +48,12 @@ export default class Home extends Component {
                                    <Blog/>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fourth">
-
+                                    <h2 className="text-center text-uppercase">Социальная ответственност</h2>
+                                    <img src="https://www.titan2.ru/images/temp/social.jpg" width={650} className="text-center" alt="titansbor"/>
+                                    
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="fifth">
+
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="sixth" className="text-center">
                                 <h1>Свяжитесь с нами</h1>
