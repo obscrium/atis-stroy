@@ -30,6 +30,101 @@ table {
   background:#0db1c7;
   padding: 10px;
   }
+.sdvig {
+  margin-left: 70px;
+}
+.social-text-wrapper {
+    margin: 20px auto;
+    float: left;
+}
+.social-text-wrapper .left {
+  width: 200px;
+  padding-top: 44px;
+  float: left;
+}
+.social-text-wrapper .right {
+  width: 610px;
+  float: right;
+}
+.social-text-wrapper .up {
+  width: 575px;
+  float: right;
+}
+.social-text-wrapper .up-title, .social-text-wrapper .down-title {
+  font-size: 22px;
+  color: #0057a6;
+  text-transform: uppercase;
+  float: left;
+}
+.social {
+  color: #0057a6;
+}
+.social-text-wrapper p {
+  margin: 15px 0 0 0;
+}
+p {
+  margin: 25px 0;
+}
+.info {
+  color: #707070;
+}
+.social-text-wrapper .social-text-8000 {
+  margin: 0;
+  font-size: 60px;
+  font-family: MyriadBold;
+  line-height: 44px;
+  color: #0057a6;
+}
+ .social-text-wrapper p {
+  margin: 15px 0 0 0;
+}
+.social-text-wrapper .social-text-workers {
+  margin: 0;
+  font-size: 25px;
+  color: #0057a6;
+}
+.social-text-wrapper .up-title p, .social-text-wrapper .down-title p {
+  margin: 17px 0;
+  color: #0057a6;
+}
+.social-text-wrapper .up-text, .social-text-wrapper .down-text {
+  width: 350px;
+  margin-left: 35px;
+  font-size: 16px;
+  color: #707070;
+  float: left;
+}
+.descrip{
+  color: #707070;
+  max-width: 720px;
+}
+h3 {
+  font-weight: 100;
+  max-width: 720px;
+}
+p img {
+  display: block;
+  height: 100%;
+  margin: 30px auto;
+  max-width: 720px;
+}
+.social-text-wrapper .down {
+  width: 545px;
+  float: right;
+  margin-top: 20px;
+}
+.social-text-wrapper .down-text {
+  width: 75%;
+}
+.social-text-wrapper .social-text-workers {
+  margin: 0;
+  font-size: 25px;
+  color: #0057a6;
+}
+p {
+  margin: 25px 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
