@@ -137,7 +137,6 @@ export default class Home extends Component {
                                     <Form.Group controlId="formBasicPassword">
                                         <Form.Control as="textarea" rows="3"/>
                                     </Form.Group>
-                                        
                                     <Button variant="primary" type="submit">Отправить</Button>
                                 </Form>
                                 </Tab.Pane>

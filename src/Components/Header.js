@@ -22,7 +22,7 @@ export default class Header extends Component {
                         src = {logo}
                         height="30"
                         width="30"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top App-logo-spin App-logo"
                         alt="logo"   
                         />
                     </Navbar.Brand>
