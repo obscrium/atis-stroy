@@ -181,6 +181,6 @@ input::-webkit-inner-spin-button {
     color: #071124;
 }
 
-.bank.active {
+.material.active {
     border-color: #599FF1;
 }
