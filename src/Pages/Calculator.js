@@ -1,16 +1,53 @@
 import React, { Component } from 'react';
-import { Container, option} from 'react-bootstrap';
+import { Container, Button} from 'react-bootstrap';
 import '../Input.css';
 
 export default class Calculator extends Component {
-    state = {
-        value : 50,
-        secondValue: 50
+    constructor(props) {
+        super(props)
+        this.state = {
+            value : '',
+            secondValue: '',
+            currentNumber: '',
+            sumQuadro :  '',
+            sumMeters: '',
+            salt: 130,
+            wall: 150,
+            facadePlaster: 400,
+            facadePutty: 220,
+            avd: 50,
+            hydrophobis: 70,
+            overhaul: 560,
+            sealingInterpanelSeams: 100,
+            sealingInterpanelSlops: 355,
+            windowInstallation: 100,
+            porcelain: 1200,
+            compositePanel: 1100,
+            metalSiding: 650,
+            plasticPanel: 450,
+            sandwichPanel: 400,
+            naturalStone: 1100,
+            izover: 50,
+            roquel100: 100,
+            roquel150: 130,
+            thermalpolystyrene: 100
+        }
     }
-    handleSubmit(event) {
-        alert('Your favorite flavor is: ' + this.state.value);
-        event.preventDefault();
-      }
+    
+    buttonPressed = val => {
+        this.setState({sumQuadro: this.state.sumQuadro + val})
+    }
+    evaluate = () => {
+        this.state.currentNumber = this.state.evaluate
+        this.setState({
+            sumQuadro:
+            parseInt(this.handleOnChange.value) *
+            parseInt(this.state.salt)
+        })
+    }
+    sumOfQuadro = val => {
+        this.setState({sumQuadro: this.state.sumQuadro + val})
+    }
     handleOnChange = (e) => this.setState({value: e.target.value})
     secondHandleOnChange = (e) => this.setState({secondValue: e.target.value})
 
@@ -29,7 +66,7 @@ export default class Calculator extends Component {
                                     <div className="input-wrapper">
                                         <div className="title">Количество квадратных метров </div>
                                         <div className="input">
-                                            <input type="number" id="total-cost" value={this.state.value} ></input>
+                                            <input type="number" id="total-cost"  value={this.state.value} ></input>
                                         </div>
                                         <div className="input">
                                             <input type="range"  id="total-cost" min={0} max={235}    onChange={this.handleOnChange}></input>
@@ -43,6 +80,7 @@ export default class Calculator extends Component {
                                         <div className="input">
                                             <input type="range" id="an-fee" min={0} max={235}    onChange={this.secondHandleOnChange}></input>
                                         </div>
+                                        <Button handleClick={this.evaluate} Style="margin-left:160px;"> Рассчитать</Button>
                                     </div>
                                     
                                 </div>
@@ -50,104 +88,123 @@ export default class Calculator extends Component {
                                 <div className="calculator-content-title">
                                     <h2>Выбрать материал</h2>
                                 </div>
-                                <select value={['a','b']} multiple={true} className="calculator-content-body-left-btns">
-                                    <option   className="material active">
-                                        <div className="text">Удаление солей</div>
-                                        <div className="value">180 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Покраска стен</div>
-                                        <div className="value">150 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Штукатурка фасада</div>
-                                        <div className="value">400 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Шпатлевка фасада</div>
-                                        <div className="value">220 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Грунтовка аппаратом высокого давления(АВД)</div>
-                                        <div className="value">50 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Гидроизоляция(гидрофобизация) поверхности</div>
-                                        <div className="value">70 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Капитальный ремонт фасада</div>
-                                        <div className="value">560 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Герметизация межпанельных швов</div>
-                                        <div className="value">100 ₽/ м. п.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Герметизация межпанельных откосов</div>
-                                        <div className="value">355 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Монтаж оконных отливов</div>
-                                        <div className="value">100 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Монтаж керамогранита с обрешеткой</div>
-                                        <div className="value">1200 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Монтаж композитных панелей</div>
-                                        <div className="value">1100 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Монтаж металлического сайдинга</div>
-                                        <div className="value">650 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Монтаж пластиковых цокольных панелей с обрешеткой</div>
-                                        <div className="value">450 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Облицовка сэндвич-панелями на готовый каркас</div>
-                                        <div className="value">400 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Облицовка натуральным камнем</div>
-                                        <div className="value">1100 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Монтаж теплоизоляции типа «Изовер»</div>
-                                        <div className="value">50 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">ММонтаж теплоизоляции типа «Рокуел -100 мм»</div>
-                                        <div className="value">100 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Монтаж теплоизоляции типа «Рокуел -150 мм»</div>
-                                        <div className="value">130 ₽/ кв. м.</div>
-                                    </option>
-                                    <option   className="material active">
-                                        <div className="text">Монтаж теплоизоляции плитами типа полистирол, пенопласт</div>
-                                        <div className="value">100 ₽/ кв. м.</div>
-                                    </option>
-                                </select>
-                                </form>
+                                <div  className="calculator-content-body-left-btns">
+                                    <label   className="material active">
+                                        <input type="checkbox"  id="salt" handleClick={this.buttonPressed}/>
+                                        Удаление солей
+                                         {this.state.salt} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Покраска стен
+                                         {this.state.wall} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Штукатурка фасада
+                                        {this.state.facadePlaster} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Шпатлевка фасада
+                                        {this.state.facadePutty} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Грунтовка аппаратом высокого давления(АВД)
+                                        {this.state.avd} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Гидроизоляция(гидрофобизация) поверхности
+                                        {this.state.hydrophobis} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Капитальный ремонт фасада
+                                        {this.state.overhaul} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Герметизация межпанельных швов
+                                        {this.state.sealingInterpanelSeams} ₽/ м. п.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Герметизация межпанельных откосов
+                                        {this.state.sealingInterpanelSlops} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Монтаж оконных отливов
+                                        {this.state.windowInstallation} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Монтаж керамогранита с обрешеткой
+                                        {this.state.porcelain} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Монтаж композитных панелей
+                                        {this.state.compositePanel} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Монтаж металлического сайдинга
+                                        {this.state.metalSiding} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Монтаж пластиковых цокольных панелей с обрешеткой
+                                        {this.state.plasticPanel} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Облицовка сэндвич-панелями на готовый каркас
+                                        {this.state.sandwichPanel} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Облицовка натуральным камнем
+                                        {this.state.naturalStone} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Монтаж теплоизоляции типа «Изовер»
+                                        {this.state.izover} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Монтаж теплоизоляции типа «Рокуел -100 мм» {this.state.roquel100} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Монтаж теплоизоляции типа «Рокуел -150 мм»
+                                        {this.state.roquel150} ₽/ кв. м.
+                                    </label>
+                                    <label   className="material active">
+                                        <input type="checkbox" />
+                                        Монтаж теплоизоляции плитами типа полистирол, пенопласт
+                                        {this.state.thermalpolystyrene} ₽/ кв. м.
+                                    </label>
+                                </div>
+                            </form>
                             </div>
+                            
                             <div className="calculator-content-body-right">
                                 <div className="final-results-wraper">
                                     <div className="final-result-item">
-                                        <div className="text">Cумма при выборе пунктов с кв.м</div>
-                                        <div className="value" id="sum">130<span>₽</span></div>
+                                        Cумма при выборе пунктов с кв.м
+                                        <div className="value" id="sumQuadro"  ><span >{this.state.sumQuadro}₽</span></div>
                                     </div>
                                     <div className="final-result-item">
-                                        <div className="text">Cумма при выборе пунктов с м.п.</div>
-                                        <div className="value" id="sum">130<span>₽</span></div>
+                                        Cумма при выборе пунктов с м.п. 
+                                        <div className="value" id="sumMeters">{this.state.sumMeters}<span>₽</span></div>
                                     </div>
-                                    
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </Container>

@@ -88,7 +88,7 @@ input::-webkit-inner-spin-button {
 
 .calculator-content-body-left,
 .calculator-content-body-right {
-    width: 50%;
+    width: 80%;
     border-right: 2px solid #E4E6EE;
     padding-top: 40px;
 }
@@ -149,8 +149,8 @@ input::-webkit-inner-spin-button {
     margin-bottom: 20px;
 }
 
-.calculator-content-body-left-btns button .text,
-.calculator-content-body-left-btns button .value {
+
+.calculator-content-body-left-btns label {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
@@ -170,7 +170,7 @@ input::-webkit-inner-spin-button {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    color: rgba(7, 17, 36, 0.5);
+    color: rgba(139, 137, 137, 0.829);
     margin-bottom: 8px;
 }
 
@@ -181,6 +181,6 @@ input::-webkit-inner-spin-button {
     color: #071124;
 }
 
-.material.active {
+.material .active {
     border-color: #599FF1;
 }
