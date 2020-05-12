@@ -6,50 +6,51 @@ export default class Calculator extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            value : '',
-            secondValue: '',
-            currentNumber: '',
-            sumQuadro :  '',
-            sumMeters: '',
-            salt: 130,
-            wall: 150,
-            facadePlaster: 400,
-            facadePutty: 220,
-            avd: 50,
-            hydrophobis: 70,
-            overhaul: 560,
-            sealingInterpanelSeams: 100,
-            sealingInterpanelSlops: 355,
-            windowInstallation: 100,
-            porcelain: 1200,
-            compositePanel: 1100,
-            metalSiding: 650,
-            plasticPanel: 450,
-            sandwichPanel: 400,
-            naturalStone: 1100,
-            izover: 50,
-            roquel100: 100,
-            roquel150: 130,
-            thermalpolystyrene: 100
+            isChecked: false,
+            quadroValue : 0,
+            sumQuadro :  0,
+            salt: 0,
+            wall: 0,
+            facadePlaster: 0,
+            facadePutty: 0,
+            avd: 0,
+            hydrophobis: 0,
+            overhaul: 0,
+            sealingInterpanelSlops: 0,
+            windowInstallation: 0,
+            porcelain: 0,
+            compositePanel: 0,
+            metalSiding: 0,
+            plasticPanel: 0,
+            sandwichPanel: 0,
+            naturalStone: 0,
+            izover: 0,
+            roquel100: 0,
+            roquel150: 0,
+            thermalpolystyrene: 0
         }
+        this.handleOnChange = this.handleOnChange.bind(this);
+        this.inputPressed = this.inputPressed.bind(this);
+        this.evaluate = this.evaluate.bind(this);
     }
     
-    buttonPressed = val => {
-        this.setState({sumQuadro: this.state.sumQuadro + val})
+    inputPressed =(event) => {
+        let isChecked = this.state.isChecked
+        if(event.target) {
+            this.setState({isChecked : !isChecked})
+        }
+        let name = event.target.name
+        this.setState({[name] : event.target.value})
+       
     }
-    evaluate = () => {
-        this.state.currentNumber = this.state.evaluate
-        this.setState({
-            sumQuadro:
-            parseInt(this.handleOnChange.value) *
-            parseInt(this.state.salt)
-        })
-    }
-    sumOfQuadro = val => {
-        this.setState({sumQuadro: this.state.sumQuadro + val})
-    }
-    handleOnChange = (e) => this.setState({value: e.target.value})
-    secondHandleOnChange = (e) => this.setState({secondValue: e.target.value})
+    handleOnChange = (e) => this.setState({quadroValue: e.target.value})
+    
+    evaluate = (event) => {
+        let setQuadro = (this.state.quadroValue * this.state.salt) + (this.state.quadroValue * this.state.wall) + (this.state.quadroValue * this.state.facadePlaster) + (this.state.quadroValue * this.state.facadePutty) + (this.state.quadroValue * this.state.avd) + (this.state.quadroValue * this.state.hydrophobis) + (this.state.quadroValue  * this.state.overhaul) + (this.state.quadroValue * this.state.sealingInterpanelSlops) + (this.state.quadroValue  * this.state.windowInstallation) + (this.state.quadroValue * this.state.porcelain) + (this.state.quadroValue * this.state.compositePanel)  + (this.state.quadroValue * this.state.metalSiding) + (this.state.quadroValue * this.state.plasticPanel) + (this.state.quadroValue * this.state.sandwichPanel) + (this.state.quadroValue * this.state.naturalStone) + (this.state.quadroValue * this.state.izover) + (this.state.quadroValue * this.state.roquel100) + (this.state.quadroValue * this.state.roquel150) + (this.state.quadroValue * this.state.thermalpolystyrene)
+        this.setState({ sumQuadro: setQuadro})
+        event.preventDefault()
+        }
+    
 
     render() {
         return (
@@ -60,151 +61,135 @@ export default class Calculator extends Component {
                             <div className="сalculator-content-title">
                                 <h1 className="text-center">Рассчитать стоимость фасадной работы</h1>
                             </div>
+                            <form onSubmit={this.evaluate}>
                         <div className="calculator-content-body">
                             <div className="calculator-content-body-left">
                                 <div className="calculator-content-body-left-inputs">
                                     <div className="input-wrapper">
-                                        <div className="title">Количество квадратных метров </div>
+                                        <div className="title text-center">Количество квадратных метров </div>
                                         <div className="input">
-                                            <input type="number" id="total-cost"  value={this.state.value} ></input>
+                                            <input type="number" id="total-cost"  value={this.state.quadroValue} min={0} max={350} onChange={this.handleOnChange}></input>
                                         </div>
                                         <div className="input">
-                                            <input type="range"  id="total-cost" min={0} max={235}    onChange={this.handleOnChange}></input>
+                                            <input type="range"  id="total-cost" min={0} max={350}  value={this.state.quadroValue}  onChange={this.handleOnChange}></input>
                                         </div>
                                     </div>
-                                    <div className="input-wrapper">
-                                        <div className="title">Количество погонных метров</div>   
-                                        <div className="input">
-                                            <input type="number" id="an-fee" value={this.state.secondValue}></input>
-                                        </div>
-                                        <div className="input">
-                                            <input type="range" id="an-fee" min={0} max={235}    onChange={this.secondHandleOnChange}></input>
-                                        </div>
-                                        <Button handleClick={this.evaluate} Style="margin-left:160px;"> Рассчитать</Button>
-                                    </div>
+                                        <Button type="submit" onClick={() => this.evaluate} Style="margin-left:160px;"> Рассчитать</Button>
                                     
                                 </div>
-                                <form onSubmit={this.handleSubmit}>
                                 <div className="calculator-content-title">
                                     <h2>Выбрать материал</h2>
                                 </div>
                                 <div  className="calculator-content-body-left-btns">
                                     <label   className="material active">
-                                        <input type="checkbox"  id="salt" handleClick={this.buttonPressed}/>
+                                        <input  type="checkbox"  name="salt"  onChange={this.inputPressed} value={130} id="salt" />
                                         Удаление солей
-                                         {this.state.salt} ₽/ кв. м.
+                                         130 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="wall" type="checkbox"   onChange={this.inputPressed} value={150} />
                                         Покраска стен
-                                         {this.state.wall} ₽/ кв. м.
+                                         150 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="facadePlaster" type="checkbox"   onChange={this.inputPressed} value={400}/>
                                         Штукатурка фасада
-                                        {this.state.facadePlaster} ₽/ кв. м.
+                                        400 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="facadePutty" type="checkbox"   onChange={this.inputPressed} value={220}/>
                                         Шпатлевка фасада
-                                        {this.state.facadePutty} ₽/ кв. м.
+                                        220 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="avd" type="checkbox"   onChange={this.inputPressed} value={50}/>
                                         Грунтовка аппаратом высокого давления(АВД)
-                                        {this.state.avd} ₽/ кв. м.
+                                        50 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="hydrophobis" type="checkbox"   onChange={this.inputPressed} value={70}/>
                                         Гидроизоляция(гидрофобизация) поверхности
-                                        {this.state.hydrophobis} ₽/ кв. м.
+                                        70 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="overhaul" type="checkbox"   onChange={this.inputPressed} value={560}/>
                                         Капитальный ремонт фасада
-                                        {this.state.overhaul} ₽/ кв. м.
+                                        560 ₽/ кв. м.
                                     </label>
+                                   
                                     <label   className="material active">
-                                        <input type="checkbox" />
-                                        Герметизация межпанельных швов
-                                        {this.state.sealingInterpanelSeams} ₽/ м. п.
-                                    </label>
-                                    <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="sealingInterpanelSlops" type="checkbox"   onChange={this.inputPressed} value={355}/>
                                         Герметизация межпанельных откосов
-                                        {this.state.sealingInterpanelSlops} ₽/ кв. м.
+                                        355 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="windowInstallation" type="checkbox"   onChange={this.inputPressed} value={100}/>
                                         Монтаж оконных отливов
-                                        {this.state.windowInstallation} ₽/ кв. м.
+                                        100 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="porcelain" type="checkbox"   onChange={this.inputPressed} value={1200}/>
                                         Монтаж керамогранита с обрешеткой
-                                        {this.state.porcelain} ₽/ кв. м.
+                                        1200 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="compositePanel" type="checkbox"   onChange={this.inputPressed} value={1100}/>
                                         Монтаж композитных панелей
-                                        {this.state.compositePanel} ₽/ кв. м.
+                                        1100 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="metalSiding" type="checkbox"   onChange={this.inputPressed} value={650}/>
                                         Монтаж металлического сайдинга
-                                        {this.state.metalSiding} ₽/ кв. м.
+                                        650 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="plasticPanel" type="checkbox"   onChange={this.inputPressed} value={450}/>
                                         Монтаж пластиковых цокольных панелей с обрешеткой
-                                        {this.state.plasticPanel} ₽/ кв. м.
+                                        450 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="sandwichPanel" type="checkbox"   onChange={this.inputPressed} value={400}/>
                                         Облицовка сэндвич-панелями на готовый каркас
-                                        {this.state.sandwichPanel} ₽/ кв. м.
+                                        400 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="naturalStone" type="checkbox"   onChange={this.inputPressed} value={1100}/>
                                         Облицовка натуральным камнем
-                                        {this.state.naturalStone} ₽/ кв. м.
+                                        1100 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="izover" type="checkbox"   onChange={this.inputPressed} value={50}/>
                                         Монтаж теплоизоляции типа «Изовер»
-                                        {this.state.izover} ₽/ кв. м.
+                                        50 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
-                                        Монтаж теплоизоляции типа «Рокуел -100 мм» {this.state.roquel100} ₽/ кв. м.
+                                        <input name="roquel100" type="checkbox"   onChange={this.inputPressed} value={100} />
+                                        Монтаж теплоизоляции типа «Рокуел -100 мм» 100 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="roquel150" type="checkbox"   onChange={this.inputPressed} value={130}/>
                                         Монтаж теплоизоляции типа «Рокуел -150 мм»
-                                        {this.state.roquel150} ₽/ кв. м.
+                                        130 ₽/ кв. м.
                                     </label>
                                     <label   className="material active">
-                                        <input type="checkbox" />
+                                        <input name="thermalpolystyrene" type="checkbox"   onChange={this.inputPressed} value={1100}/>
                                         Монтаж теплоизоляции плитами типа полистирол, пенопласт
-                                        {this.state.thermalpolystyrene} ₽/ кв. м.
+                                        1100 ₽/ кв. м.
                                     </label>
                                 </div>
-                            </form>
                             </div>
                             
                             <div className="calculator-content-body-right">
                                 <div className="final-results-wraper">
                                     <div className="final-result-item">
                                         Cумма при выборе пунктов с кв.м
-                                        <div className="value" id="sumQuadro"  ><span >{this.state.sumQuadro}₽</span></div>
+                                        <div className="value" id="sumQuadro"  ><span > {this.state.sumQuadro}₽</span></div>
                                     </div>
-                                    <div className="final-result-item">
-                                        Cумма при выборе пунктов с м.п. 
-                                        <div className="value" id="sumMeters">{this.state.sumMeters}<span>₽</span></div>
-                                    </div>
+                                    
                                     </div>
                                     </div>
                                 </div>
+                            </form>
                         </div>
                     </div>
                 </Container>
