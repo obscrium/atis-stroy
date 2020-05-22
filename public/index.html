@@ -40,4 +40,27 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDOU4f7fYOpSocQfm50pD7uGbKUy0EyoC8",
+    authDomain: "atis-react.firebaseapp.com",
+    databaseURL: "https://atis-react.firebaseio.com",
+    projectId: "atis-react",
+    storageBucket: "atis-react.appspot.com",
+    messagingSenderId: "528384738683",
+    appId: "1:528384738683:web:b116e56114d4db0426e9de",
+    measurementId: "G-BBLCNHB1E7"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </html>

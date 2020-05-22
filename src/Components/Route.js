@@ -11,6 +11,8 @@ import Workers from '../Pages/Workers'
 import Calculator from '../Pages/Calculator'
 
 
+
+
 export default class Header extends Component {
     render() {
         return (
@@ -37,15 +39,16 @@ export default class Header extends Component {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <Router>
-                <Switch>
-                    <Route  exact path="/" component={Home}/>
-                    <Route  exact path="/partners" component={Partners}/>
-                    <Route  exact path="/sharers" component={Sharers}/>
-                    <Route  exact path="/workers" component={Workers}/>
-                    <Route  exact path="/calculator" component={Calculator}/>
-                </Switch>
-            </Router>
+                <Router>
+                    <Switch>
+                        <Route  exact path="/" component={Home}/>
+                        <Route  exact path="/partners" component={Partners}/>
+                        <Route  exact path="/sharers" component={Sharers}/>
+                        <Route  exact path="/workers" component={Workers}/>
+                        <Route  exact path="/calculator" component={Calculator}/>
+                        
+                    </Switch>
+                </Router>
             </>
         )
     }
