@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import logo from '../logo192.png';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 // MUI
 import AppBar from '@material-ui/core/AppBar';
@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 
 // import { connect } from 'react-redux';
 // Icons
-import HomeIcon from '@material-ui/icons/Home';
+// import HomeIcon from '@material-ui/icons/Home';
 
 
 
@@ -39,11 +39,11 @@ import HomeIcon from '@material-ui/icons/Home';
         )
     }
 }
-Navbar.propTypes = {
-    authenticated: PropTypes.bool.isRequired
-  };
+//Navbar.propTypes = {
+ //   authenticated: PropTypes.bool.isRequired
+ // };
   
-  const mapStateToProps = (state) => ({
-    authenticated: state.user.authenticated
-  });
+  //const mapStateToProps = (state) => ({
+  //  authenticated: state.user.authenticated
+  //});
 // export default connect(mapStateToProps)(Navbar);

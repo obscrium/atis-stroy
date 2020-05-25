@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //Redux
 // Components
-import Navbar from './layout/Navbar';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+ import Navbar from './layout/Navbar';
+import { MuiThemeProvider } from '@material-ui/core/styles'
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-import themeObject from '../util/theme';
+// import themeObject from '../util/theme';
 // Pages
 import Home from '../Pages/Home';
 import Partners from '../Pages/Partners';
@@ -17,7 +17,23 @@ import Login from '../Server/Login';
 import Signup from '../Server/Signup'
 
  const theme = createMuiTheme({
-    themeObject
+    palette: {
+        primary: {
+          light: '#33c9dc',
+          main: '#00bcd4',
+          dark: '#008394',
+          contrastText: '#fff'
+        },
+        secondary: {
+          light: '#ff6333',
+          main: '#ff3d00',
+          dark: '#b22a00',
+          contrastText: '#fff'
+        }
+      },
+      typography: {
+        useNextVariants: true
+      }
  })
 
 

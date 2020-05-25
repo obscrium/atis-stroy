@@ -6,10 +6,7 @@ import Route from './Components/Route';
 
 function App() {
   return (
-    <div>
       <Route />
-      
-    </div>
   );
 }
 
