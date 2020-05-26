@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import AppIcon from '../Assets/logo192.png';
 
 import { Link } from 'react-router-dom';
+import themeObject from '../util/theme';
 
 // MUI Stuff
 import Grid from '@material-ui/core/Grid';
@@ -16,10 +17,10 @@ import { connect } from 'react-redux';
 import { signupUser } from '../redux/actions/userActions';
 
 const styles = (theme) => ({
-  ...theme
+  themeObject
 });
 
-class signup extends Component {
+class Signup extends Component {
   constructor() {
     super();
     this.state = {
@@ -146,7 +147,7 @@ class signup extends Component {
   }
 }
 
-signup.propTypes = {
+Signup.propTypes = {
   classes: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired,
   UI: PropTypes.object.isRequired,
@@ -161,4 +162,4 @@ const mapStateToProps = (state) => ({
 export default connect(
   mapStateToProps,
   { signupUser }
-)(withStyles(styles)(signup));
+)(withStyles(styles)(Signup));

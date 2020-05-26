@@ -1,25 +1,37 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import logo from '../logo192.png';
-//import PropTypes from 'prop-types';
-
-// MUI
+import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import MyButton from '../../util/MyButton';
+import PostScream from '../scream/PostScream';
+import Notifications from './Notifications';
+import logo from '../../Assets/logo192.png'
+// MUI stuff
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-
-// import { connect } from 'react-redux';
 // Icons
-// import HomeIcon from '@material-ui/icons/Home';
+import HomeIcon from '@material-ui/icons/Home';
 
-
-
- export default class Navbar extends Component {
-    render() {
-        return (
-            <AppBar >
-                <Toolbar > 
-                    <Button component={Link} to="/" >
+class Navbar extends Component {
+  render() {
+    const { authenticated } = this.props;
+    return (
+      <AppBar>
+        <Toolbar className="nav-container">
+          {authenticated ? (
+            <Fragment>
+              <PostScream />
+              <Link to="/">
+                <MyButton tip="Home">
+                  <HomeIcon />
+                </MyButton>
+              </Link>
+              <Notifications />
+            </Fragment>
+          ) : (
+            <Fragment>
+              <Button component={Link} to="/" >
                         <img 
                         src = {logo}
                         height="30"
@@ -33,17 +45,20 @@ import Button from '@material-ui/core/Button';
                     <Button component={Link} color="inherit" to="/workers">Сотрудникам</Button>
                     <Button component={Link} color="inherit" to="/calculator">Калькулятор</Button>
                     <Button component={Link} color="inherit" Style="margin-left: 550px;" to="/login" > Войти/зарегистрироваться</Button>
-
-                </Toolbar>
-            </AppBar>
-        )
-    }
+            </Fragment>
+          )}
+        </Toolbar>
+      </AppBar>
+    );
+  }
 }
-//Navbar.propTypes = {
- //   authenticated: PropTypes.bool.isRequired
- // };
-  
-  //const mapStateToProps = (state) => ({
-  //  authenticated: state.user.authenticated
-  //});
-// export default connect(mapStateToProps)(Navbar);
+
+Navbar.propTypes = {
+  authenticated: PropTypes.bool.isRequired
+};
+
+const mapStateToProps = (state) => ({
+  authenticated: state.user.authenticated
+});
+
+export default connect(mapStateToProps)(Navbar);

@@ -3,6 +3,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
 import AppIcon from '../Assets/logo192.png';
 import { Link } from 'react-router-dom';
+import themeObject from '../util/theme';
 
 // MUI Stuff
 import Grid from '@material-ui/core/Grid';
@@ -15,7 +16,7 @@ import { connect } from 'react-redux';
 import { loginUser } from '../redux/actions/userActions';
 
 const styles = (theme) => ({
-  ...theme
+  themeObject
 });
 
 class Login extends Component {
@@ -53,10 +54,10 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <Grid container className={classes.form}>
+      <Grid container className={classes.form} Style="margin-top: 100px;">
         <Grid item sm />
         <Grid item sm>
-          <img src={AppIcon} alt="monkey" className={classes.image} />
+          <img src={AppIcon} alt="monkey" width={50} height={50} className={classes.image} />
           <Typography variant="h2" className={classes.pageTitle}>
             Login
           </Typography>
@@ -134,5 +135,3 @@ export default connect(
   mapStateToProps,
   mapActionsToProps
 )(withStyles(styles)(Login));
-
-// 6:26:00
