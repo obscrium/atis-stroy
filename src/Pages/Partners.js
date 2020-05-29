@@ -355,14 +355,14 @@ export default class Partners extends Component {
                             </Tab.Pane>
                             <Tab.Pane eventKey="fourth">
                             <h1 className="descrip">СПИСОК ТЕКУЩИХ ЗАКУПОЧНЫХ ПРОЦЕДУР</h1>
-                            <table class="PDF" Style="margin-right: auto; margin-right: 100px; width:600px;"><colgroup><col/> <col/> <col/> <col/> <col/> <col/> </colgroup>
+                            <table className="PDF" Style="margin-right: auto; margin-right: 100px; width:600px;"><colgroup><col/> <col/> <col/> <col/> <col/> <col/> </colgroup>
 <tbody>
 <tr>
 <td Style="text-align: center; vertical-align: middle;">ДАТА НАЧАЛА ПРОЦЕДУРЫ&nbsp;</td>
 <td Style="text-align: center; vertical-align: middle;">ДАТА ОКОНЧАНИЯ ПРОЦЕДУРЫ</td>
 <td Style="text-align: center; vertical-align: middle;">№ ЛОТА&nbsp;</td>
 <td Style="text-align: center; vertical-align: middle;">&nbsp;НАИМЕНОВАНИЕ ЗАКУПОЧНОЙ ПРОЦЕДУРЫ</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;"><br/>СТАТУС</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;"><br/>СТАТУС</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -377,14 +377,14 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">06.05.2020</td>
 <td Style="text-align: center; vertical-align: middle;">305</td>
 <td Style="text-align: left; vertical-align: middle;">Установка механических дверных доводчиков (для наружных дверей), номерных знаков и информационного щита</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Подача заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Подача заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
 <td Style="text-align: center; vertical-align: middle;"></td>
 <td Style="text-align: center; vertical-align: middle;"></td>
 <td Style="text-align: left; vertical-align: middle;"></td>
-<td Style="text-align: center; vertical-align: middle;"><a href="https://www.titan2.ru/images/Procurement_notice_305.pdf" class="pdf">Procurement_notice_305</a></td>
+<td Style="text-align: center; vertical-align: middle;"><a href="https://www.titan2.ru/images/Procurement_notice_305.pdf" className="pdf">Procurement_notice_305</a></td>
 <td Style="text-align: center; vertical-align: middle;">-</td>
 </tr>
 <tr>
@@ -392,14 +392,14 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">01.05.2020</td>
 <td Style="text-align: center; vertical-align: middle;">294</td>
 <td Style="text-align: left; vertical-align: middle;">Поставка оборудования для выполнения модернизации трансформаторных подстанций 91UAD и 95UAD</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Подача заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Подача заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
 <td Style="text-align: center; vertical-align: middle;"></td>
 <td Style="text-align: center; vertical-align: middle;"></td>
 <td Style="text-align: left; vertical-align: middle;"></td>
-<td Style="text-align: center; vertical-align: middle;"><a href="https://www.titan2.ru/images/Procurement_notice_294.pdf" class="pdf">Procurement_notice_294</a></td>
+<td Style="text-align: center; vertical-align: middle;"><a href="https://www.titan2.ru/images/Procurement_notice_294.pdf" className="pdf">Procurement_notice_294</a></td>
 <td Style="text-align: center; vertical-align: middle;">-</td>
 </tr>
 <tr>
@@ -407,7 +407,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">29.04.2020</td>
 <td Style="text-align: center; vertical-align: middle;">304</td>
 <td Style="text-align: left; vertical-align: middle;">Оказание услуг по предоставлению рабочего персонала для нужд программы по строительству АЭС «Ханхикиви-1»&nbsp;</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -422,7 +422,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">28.04.2020</td>
 <td Style="text-align: center; vertical-align: middle;">303</td>
 <td Style="text-align: left; vertical-align: middle;">Аренда оборудования и инструмента&nbsp;на площадке строительства АЭС "Ханхикиви-1"</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -437,7 +437,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">22.04.2020</td>
 <td Style="text-align: center; vertical-align: middle;">302</td>
 <td Style="text-align: left; vertical-align: middle;">Аренда стеновой опалубки для 91USK</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -452,7 +452,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">24.04.2020</td>
 <td Style="text-align: center; vertical-align: middle;">223</td>
 <td Style="text-align: left; vertical-align: middle;">Сооружение площадки для хранения оборудования турбины 97UZC (Железобетонные конструкции) и устройство фундаментов под опоры освещения</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -467,7 +467,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">15.04.2020</td>
 <td Style="text-align: center; vertical-align: middle;">236</td>
 <td Style="text-align: left; vertical-align: middle;">Поставка и монтаж оборудования структурированной кабельной системы в трансформаторных подстанциях 91UAD, 92UAD, 95UAD, 96UAD, 97UAD</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -482,7 +482,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">06.04.2020</td>
 <td Style="text-align: center; vertical-align: middle;">107.2.1.1</td>
 <td Style="text-align: left; vertical-align: middle;">Земляные работы и устройство фундаментов зданий складского хозяйства, 96USK «Холодный склад», 97USK «Холодный склад», 98USK «Холодный склад с теплоизоляцией», 99USK «Холодный склад с теплоизоляцией», изготовление, поставка и устройство фундаментов 90USK «Холодный склад»</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -497,7 +497,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">07.04.2020</td>
 <td Style="text-align: center; vertical-align: middle;">297.1</td>
 <td Style="text-align: left; vertical-align: middle;">Поставка инструментов и материалов для возведения фундаментной плиты 97UZC и КПП91-92UYF</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -512,7 +512,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">13.03.2020</td>
 <td Style="text-align: center; vertical-align: middle;">293</td>
 <td Style="text-align: left; vertical-align: middle;">Поставка страховочного оборудования&nbsp; для работ в стесненном пространстве для площадки "Ханхикиви-1"</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -527,7 +527,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">20.03.2020</td>
 <td Style="text-align: center; vertical-align: middle;">231</td>
 <td Style="text-align: left; vertical-align: middle;">«Выполнение комплекса работ по монтажу кранового хозяйства объектов 93UST «Цех арматурных изделий» и 92USN «Склад металла»</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -542,7 +542,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">04.03.2020</td>
 <td Style="text-align: center; vertical-align: middle;">289.3</td>
 <td Style="text-align: left; vertical-align: middle;">Поставка портативного дефлектометра</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -557,7 +557,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">02.03.2020</td>
 <td Style="text-align: center; vertical-align: middle;">291</td>
 <td Style="text-align: left; vertical-align: middle;">Оказание консультационных услуг в области налогообложения, налогового планирования, бухгалтерского учета и связанных с указанными вопросами рисков при выполнении строительно-монтажных работ, поставки оборудования, осуществления проектирования предусмотренных контрактом, по проекту строительства АЭС "Ханхикиви-1"</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -572,7 +572,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">26.02.2020</td>
 <td Style="text-align: center; vertical-align: middle;">290</td>
 <td Style="text-align: left; vertical-align: middle;">Техническое обслуживание порошковых огнетушителей на площадке строительства АЭС "Ханхикиви-1"</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -589,7 +589,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">26.02.2020</td>
 <td Style="text-align: center; vertical-align: middle;">181</td>
 <td Style="text-align: left; vertical-align: middle;">Эксплуатация помещений для переодевания 92UYA (ПОВТОРНЫЙ ТЕНДЕР)</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -604,7 +604,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">02.03.2020</td>
 <td Style="text-align: center; vertical-align: middle;">218.2</td>
 <td Style="text-align: left; vertical-align: middle;">Прокладка внешних сетей электроснабжения и наружного освещения для зданий СМБ АЭС Ханхикиви-1: Склад баллонов (94USK), Открытая укрупнительная площадка (92UZC)</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -619,7 +619,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">29.01.2020</td>
 <td Style="text-align: center; vertical-align: middle;">287</td>
 <td Style="text-align: left; vertical-align: middle;">Поставка материалов и оборудования для систем связи и структурированной кабельной сети зданий АБК 94UYA, 95UYA</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -634,7 +634,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">15.11.2019</td>
 <td Style="text-align: center; vertical-align: middle;">132</td>
 <td Style="text-align: left; vertical-align: middle;">Поставка мостовых кранов для цеха предмонтажной подготовки 96UST, цеха турбины 98UST, мастерских главного механика и главного энергетика 95UST, цеха антикоррозионной обработки с окрасочной камерой 94UST</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -649,7 +649,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">07.11.2019</td>
 <td Style="text-align: center; vertical-align: middle;">225</td>
 <td Style="text-align: left; vertical-align: middle;">Разработка грунта, устройство фундаментных плит и ограждения для здания блочно – модульной котельной 92UTH и резервуара для хранения топлива объемом 50м3</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -664,7 +664,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">16.09.2019</td>
 <td Style="text-align: center; vertical-align: middle;">102.2</td>
 <td Style="text-align: left; vertical-align: middle;">Поставка самоходных тележек для цехов</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -679,7 +679,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">16.09.2019</td>
 <td Style="text-align: center; vertical-align: middle;">260</td>
 <td Style="text-align: left; vertical-align: middle;">Поставка и монтаж оборудования систем связи, АПС, СКУД для здания столовой 92UYD</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -694,7 +694,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">23.08.2019</td>
 <td Style="text-align: center; vertical-align: middle;">251</td>
 <td Style="text-align: left; vertical-align: middle;">Выполнение электромонтажных работ на территории арматурного хозяйства</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -709,7 +709,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">22.07.2019</td>
 <td Style="text-align: center; vertical-align: middle;">148.6</td>
 <td Style="text-align: left; vertical-align: middle;">Прокладка инженерных сетей (наружных и внутренних), выполнение отделочных работ в зданиях 93UST, 92USN, 93UYA и благоустройство на территории арматурного хозяйства</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>
@@ -724,7 +724,7 @@ export default class Partners extends Component {
 <td Style="text-align: center; vertical-align: middle;">16.10.2017</td>
 <td Style="text-align: center; vertical-align: middle;">FH1-17-(001-024)</td>
 <td Style="text-align: left; vertical-align: middle;">Квалификационный отбор участников запроса предложений на поставку первоочередного оборудования для АЭС «Ханхикиви-1»</td>
-<td colspan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
+<td colSpan="2" Style="text-align: center; vertical-align: middle;">Рассмотрение заявок</td>
 </tr>
 <tr>
 <td Style="text-align: center; vertical-align: middle;"></td>

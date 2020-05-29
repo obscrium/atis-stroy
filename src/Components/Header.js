@@ -15,7 +15,6 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import Home from '../Pages/Home';
 import Partners from '../Pages/Partners';
 import News from '../Pages/News';
-import User from '../Server/User';
 import Workers from '../Pages/Workers';
 import Calculator from '../Pages/Calculator';
 import Login from '../Server/Login';
@@ -23,7 +22,7 @@ import Signup from '../Server/Signup'
 import axios from 'axios';
 import { amber, indigo } from "@material-ui/core/colors";
 
- axios.defaults.baseURL= 'http://localhost:5000/atis-react/europe-west3/api';
+ axios.defaults.baseURL= 'https://europe-west3-atis-react.cloudfunctions.net/api';
  const theme = createMuiTheme({ 
   palette: {
     primary: indigo,
@@ -62,8 +61,6 @@ export default class Header extends Component {
                                     <Route  exact path="/news" component={News}/>
                                     <Route  exact path="/workers" component={Workers}/>
                                     <Route  exact path="/calculator" component={Calculator}/>
-                                    <Route  exact path="/users/:handle" component={User}/>
-                                    <Route  exact path="/users/:handle/scream/:screamId" component={User}/>
                                     <AuthRoute  exact path="/login" component={Login}/>
                                     <AuthRoute  exact path="/signup" component={Signup}/>
                                 </Switch>

@@ -11,10 +11,10 @@ import CalendarToday from '@material-ui/icons/CalendarToday';
 import { indigo, amber } from '@material-ui/core/colors';
 
 const styles = (theme) => ({
-  ...theme,
+  ...theme.spreadThis,
   handle: {
     height: 20,
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: amber,
     width: 60,
     margin: '0 auto 7px auto'
   },

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import AppIcon from '../Assets/logo192.png';
 
 import { Link } from 'react-router-dom';
-import themeObject from '../util/theme';
 
 // MUI Stuff
 import Grid from '@material-ui/core/Grid';
@@ -17,7 +16,7 @@ import { connect } from 'react-redux';
 import { signupUser } from '../redux/actions/userActions';
 
 const styles = (theme) => ({
-  themeObject
+  ...theme.spreadThis
 });
 
 class Signup extends Component {
